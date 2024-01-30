@@ -1,0 +1,28 @@
+.about__wrapper {
+  height: 100%;
+}
+
+.about__main {
+  margin-top: 48px;
+  margin-bottom: 64px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--philippine-silver);
+}
+
+.text {
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--bright-gray);
+}
+
+.about__sub {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
