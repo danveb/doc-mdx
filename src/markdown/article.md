@@ -7,17 +7,17 @@
 <br>
 
 <Code language="bash">
-  $ yarn create vite project_name
+  yarn create vite project_name
 </Code>
 
 <br> 
 
-<p className="text">Install the following dependencies to make `Markdown` readable in React and use syntax-highlighting</p>
+<p className="text">Install dependencies</p>
 
 <br>
 
 <Code language="bash">
-  $ yarn add markdown-to-jsx react-syntax-highlighter
+  yarn add markdown-to-jsx react-syntax-highlighter react-copy-to-clipboard
 </Code>
 
 <br> 

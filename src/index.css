@@ -66,3 +66,13 @@ svg {
     padding: 8px 20px;
   }
 }
+
+@keyframes icon-toggle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

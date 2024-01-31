@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  animation: icon-toggle 1.5s;
 }
 
 .nav__icon {
