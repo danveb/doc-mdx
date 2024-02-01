@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App.jsx"
-import NotFound from "./components/NotFound.jsx";
+import { NotFound } from "./components";
 import {
   createBrowserRouter,
   RouterProvider,
