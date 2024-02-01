@@ -24,7 +24,10 @@ export default function Code({ children, language }) {
 
   return (
     <div className="code">
-      <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
+      <CopyToClipboard
+        text={children}
+        onCopy={() => setCopied(true)}
+      >
         <button className="code__icon copy__icon">
           {copied ? <PasteIcon className="paste__icon" /> : <CopyIcon />}
         </button>

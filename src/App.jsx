@@ -1,7 +1,5 @@
 import { useState, createContext } from "react";
-import About from "./components/About";
-import Navbar from "./components/Navbar";
-import Post from "./components/Post";
+import { About, Navbar, Post } from "./components";
 
 // createContext
 export const ThemeContext = createContext();

@@ -1,6 +1,6 @@
 import Markdown from "markdown-to-jsx";
 import { useEffect, useState } from "react";
-import Code from "./Code";
+import { Code } from "../components";
 
 export default function Post() {
   // useState

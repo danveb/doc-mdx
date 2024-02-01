@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import { textSections } from "../constants";
 import "../styles/About.css";
 
