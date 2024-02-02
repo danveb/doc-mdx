@@ -59,6 +59,11 @@ svg {
   width: 100%;
 }
 
+.mini__text {
+  font-size: 11px;
+  color: var(--philippine-silver);
+}
+
 @media (max-width: 830px) {
 
   .container,
