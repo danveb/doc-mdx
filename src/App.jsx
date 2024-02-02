@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import { About, Navbar, Post } from "./components";
+import { About, Footer, Navbar, Post } from "./components";
 
 // createContext
 export const ThemeContext = createContext();
@@ -18,6 +18,7 @@ export default function App() {
       <Navbar />
       <About />
       <Post />
+      <Footer />
     </ThemeContext.Provider>
   )
 }
