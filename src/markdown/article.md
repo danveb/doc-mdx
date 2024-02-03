@@ -22,7 +22,7 @@
 
 <br> 
 
-<h3 className="title">Build Post Component</h3>
+<h3 className="title">Build `Post` Component</h3>
 
 <br>
 
@@ -70,11 +70,11 @@ export default function Post() {
 
 <br>
 
-<h3 className="title">Build Code Component</h3>
+<h3 className="title">Build `Code` Component</h3>
 
 <br> 
 
-<p className="text">Use this base template. Please refer to the documentation provided to customize each package accordingly. I tend to use `customStyle` and `wrapLongLines` attributes to further enhance the code snippet.</p>
+<p className="text">Use this base template. Please refer to the documentation provided to customize each package accordingly. I tend to use `customStyle` and `wrapLongLines` attributes to enhance presentation and readability of the code snipper across devices.</p>
 
 <br> 
 
