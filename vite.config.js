@@ -9,4 +9,11 @@ export default defineConfig({
   },
   // assets to be able to import and read markdown
   assetsInclude: ['**/*.md'],
+  // test
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./setupTests.js'],
+  },
+
 })
