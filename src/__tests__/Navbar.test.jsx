@@ -1,5 +1,5 @@
 import { describe, test, expect, vi } from "vitest";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Navbar } from "../components";
 import { BrowserRouter } from "react-router-dom";
 
@@ -27,5 +27,17 @@ describe("Navbar component", () => {
       </BrowserRouter>
     );
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  test("renders doc-mdx logo", () => {
+    render(
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+    );
+    const logo = screen.getByText("doc-mdx", {
+      exact: true
+    });
+    expect(logo).toBeInTheDocument();
   });
 });

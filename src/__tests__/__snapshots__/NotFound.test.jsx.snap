@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NotFound component > matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="not__found container"
+  >
+    <p
+      class="text"
+    >
+      404 | Sorry, page not found.
+    </p>
+  </div>
+</DocumentFragment>
+`;
