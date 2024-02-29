@@ -1,11 +1,10 @@
 import { LogoIcon, MoonIcon, SunIcon } from "./assets/icons";
 import "../styles/Navbar.css";
-import { useContext } from "react";
-import { ThemeContext } from "../App";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
-  // useContext 
-  const { darkMode, setDarkMode } = useContext(ThemeContext);
+  // useTheme 
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="navbar">
@@ -14,10 +13,10 @@ export default function Navbar() {
           <LogoIcon />
           <p>doc-mdx</p>
           <button
-            onClick={() => setDarkMode(!darkMode)}
+            onClick={toggleTheme}
             className="nav__icon"
           >
-            {darkMode ? <MoonIcon /> : <SunIcon />}
+            {theme === "dark" ? <MoonIcon /> : <SunIcon />}
           </button>
         </div>
       </div>

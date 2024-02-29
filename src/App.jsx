@@ -1,24 +1,13 @@
-import { useState, createContext } from "react";
 import { About, Footer, Navbar, Post } from "./components";
-
-// createContext
-export const ThemeContext = createContext();
+import { ThemeProvider } from "./context/ThemeContext";
 
 export default function App() {
-  // useState 
-  const [darkMode, setDarkMode] = useState(true);
-
-  // value to be darkMode, setDarkMode
-  const value = {
-    darkMode, setDarkMode
-  }
-
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeProvider>
       <Navbar />
       <About />
       <Post />
       <Footer />
-    </ThemeContext.Provider>
+    </ThemeProvider>
   )
 }

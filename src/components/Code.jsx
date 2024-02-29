@@ -4,21 +4,21 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkCold, coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { CopyIcon, PasteIcon } from "./assets/icons";
 import "../styles/Code.css";
-import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "../App";
+import { useEffect, useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Code({ children, language }) {
   // useState 
   const [copied, setCopied] = useState(false);
 
-  // useContext 
-  const { darkMode } = useContext(ThemeContext);
+  // useTheme 
+  const { theme } = useTheme();
 
   // useEffect
   useEffect(() => {
     const timer = setTimeout(() => {
       setCopied(false);
-    }, 1500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [copied]);
 
@@ -34,7 +34,7 @@ export default function Code({ children, language }) {
       </CopyToClipboard>
       <SyntaxHighlighter
         language={language}
-        style={darkMode ? coldarkDark : coldarkCold}
+        style={theme === "dark" ? coldarkDark : coldarkCold}
         wrapLongLines={true}
         customStyle={{
           fontSize: "14px",
