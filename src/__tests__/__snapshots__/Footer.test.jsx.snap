@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer component > matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="footer"
+  >
+    <div
+      class="footer__wrapper container"
+    >
+      <p
+        class="mini__text"
+      >
+        © All rights reserved |  danveb
+      </p>
+      <a
+        href="https://www.github.com/danveb"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <img
+          alt="github logo"
+          src="/src/components/assets/github-mark-white.png"
+        />
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

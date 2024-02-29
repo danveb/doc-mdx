@@ -6,16 +6,18 @@ export default function Post() {
   // useState
   const [posts, setPosts] = useState("");
 
-  // useEffect
   useEffect(() => {
-    import("../markdown/article.md")
-      .then(res => {
-        fetch(res.default)
-          .then(response => response.text())
-          .then(response => setPosts(response))
-          .catch(err => console.log(err));
-      });
+    fetchMarkdownFile();
   }, []);
+
+  const fetchMarkdownFile = async () => {
+    try {
+      const markdownModule = await import("../markdown/article.md");
+      setPosts(markdownModule.default);
+    } catch (error) {
+      console.error("Error fetching Markdown file:", error);
+    }
+  };
 
   return (
     <article className="article">
