@@ -17,7 +17,7 @@ describe("About component", () => {
     render(
       <About />
     )
-    const text = screen.getByText("This is doc-mdx, a simple application that allows users create beautiful and concise technical documentation directly from markdown. In this article, I will go over the details of installation and daily usage.");
+    const text = screen.getByText("This is doc-mdx, a simple application that allows users create concise technical documentation directly from a markdown document. In this article, I will go over the process of installation and usage.");
     expect(text).toBeInTheDocument();
   });
 });

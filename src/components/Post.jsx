@@ -10,13 +10,15 @@ export default function Post() {
     fetchMarkdownFile();
   }, []);
 
-  const fetchMarkdownFile = async () => {
-    try {
-      const markdownModule = await import("../markdown/article.md");
-      setPosts(markdownModule.default);
-    } catch (error) {
-      console.error("Error fetching Markdown file:", error);
-    }
+  const fetchMarkdownFile = () => {
+    import("../markdown/article.md")
+      .then(res => {
+        fetch(res.default)
+          .then(res => res.text())
+          .then(res => setPosts(res))
+          .catch(err => console.log(err));
+      })
+      .catch(err => console.log(err));
   };
 
   return (
